@@ -1,0 +1,19 @@
+.class {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFBFC;
+}
+
+.class-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+}
+
+.class-container-workspace {
+    width: calc(100% - 250px);
+    height: fit-content;
+}

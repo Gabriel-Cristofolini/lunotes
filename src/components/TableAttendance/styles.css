@@ -1,0 +1,8 @@
+.tableattendance {
+    width: 70%;
+    height: fit-content;
+}
+
+.tableattendance tr {
+    height: 30px;
+}

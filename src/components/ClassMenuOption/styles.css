@@ -1,0 +1,25 @@
+.class-menu-option {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid #CCC;
+    background-color: #FFF;
+    color: #333;
+}
+
+.class-menu-option:hover {
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+.class-menu-option img {
+    height: 15px;
+    display: none;
+}
+
+.class-menu-option:hover img {
+    display: block;
+}

@@ -1,0 +1,22 @@
+.button {
+    width: 250px;
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: #FFF;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+.buttonBlue {
+    background-color: #1C5D99;
+}
+.buttonBlue:hover {
+    background-color: #004585;
+}
+.buttonRed {
+    background-color: #D60000;
+}
+.buttonRed:hover {
+    background-color: #9A0000;
+}

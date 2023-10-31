@@ -1,0 +1,40 @@
+.class-section {
+    width: 100%;
+    height: fit-content;
+    padding: 25px;
+    border-bottom: 1px solid #CCC;
+    overflow: hidden;
+}
+
+.class-section-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.class-section-header img {
+    margin-right: 10px;
+}
+
+.class-section-header-img {
+    transform: rotate(-90deg);
+}
+
+.class-section-content {
+    width: 100%;
+    margin-top: 25px;
+    transition: all ease 0.2s;
+}
+
+.class-section-content-opened {
+    height: max-content;
+}
+
+.class-section-content-closed {
+    height: 0px;
+    margin: 0px;
+    overflow: hidden;
+}

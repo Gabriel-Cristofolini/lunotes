@@ -1,0 +1,17 @@
+.class-card {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #33333350;
+    background-color: #FFF;
+    transition: all ease 0.2s;
+}
+
+.class-card:hover {
+    background-color: #EEE;
+    cursor: pointer;
+}
