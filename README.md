@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Backend
+
+You can use `docker` or `podman` here, feel free to choose the one you prefer, the commands are the same.
+
+#### Start the database:
+`podman run --rm --name=my-mysql --env MYSQL_ROOT_PASSWORD=password --detach --publish 3306:3306 mysql`
+
+#### Access the database
+`podman exec -it <podman-id> mysql -u root -p`
+
+### Create database
+`CREATE DABATASE database_development;`
+
+#### Generate migration models
+criar migracao: `sequelize model:generate --name User --attributes name:string,password:string,role:string`
+
+#### Run the generated migration
+rodar migracao: `sequelize db:migrate`
+
+#### Start the server
+`npm run server`
