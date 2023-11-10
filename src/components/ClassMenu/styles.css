@@ -1,8 +1,12 @@
 .class-menu {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 250px;
     height: calc(100vh - 60px);
+    margin-top: 60px;
     border-right: 1px solid #CCC;
+    background-color: #FAFBFC;
 }
 
 .class-menu-title {

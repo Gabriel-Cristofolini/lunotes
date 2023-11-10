@@ -1,0 +1,22 @@
+.test-card {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #33333350;
+    background-color: #FFF;
+    color: #333;
+    transition: all ease 0.2s;
+}
+
+.test-card:hover {
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+.test-card img {
+    height: 20px;
+}

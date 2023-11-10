@@ -8,12 +8,27 @@
 }
 
 .class-container {
+    position: relative;
     width: 100%;
     height: calc(100% - 60px);
     display: flex;
+    margin-top: 60px;
 }
 
 .class-container-workspace {
     width: calc(100% - 250px);
     height: fit-content;
+    margin-left: 250px;
+}
+
+.class-container-workspace-test-card {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.class-container-workspace-test-card > * {
+    margin-right: 25px;
+    margin-bottom: 25px;
 }

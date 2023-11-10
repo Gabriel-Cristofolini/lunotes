@@ -16,5 +16,5 @@
 }
 
 .input input:focus {
-    border: 1px solid blue;
+    border: 1px solid #1C5D99;
 }

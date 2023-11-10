@@ -1,8 +1,44 @@
-.tableattendance {
-    width: 70%;
+.tableAttendance {
+    width: 100%;
     height: fit-content;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
 }
 
-.tableattendance tr {
+.tableAttendance tr {
+    height: fit-content;
+    display: flex;
+}
+
+.tableAttendance tr > *:not(:last-child) {
+    border-right: 1px solid #CCC;
+}
+
+.tableAttendance tr:not(:last-child) {
+    border-bottom: 1px solid #CCC;
+}
+
+.tableAttendance th {
+    min-height: 30px;
+}
+
+
+.tableAttendance th:not(:first-child), .tableAttendance td:not(:first-child) {
+    width: 12.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tableAttendance th:first-child, .tableAttendance td:first-child {
+    width: 37.5%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.tableAttendance td {
     height: 30px;
+
 }
