@@ -4,6 +4,14 @@
     border-radius: 4px;
     border: 1px solid #CCC;
     background-color: #FFF;
+    color: #333;
+    border-collapse: collapse;
+}
+
+.tableAttendance thead {
+    border-bottom: 1px solid #CCC;
+    height: fit-content;
+    width: fit-content;
 }
 
 .tableAttendance tr {
@@ -35,10 +43,16 @@
     width: 37.5%;
     display: flex;
     align-items: center;
-    padding-left: 10px;
+    padding: 0 10px;
 }
 
 .tableAttendance td {
     height: 30px;
+}
 
+.tableAttendance td span {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

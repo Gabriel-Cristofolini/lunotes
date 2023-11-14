@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import Parser from "html-react-parser";
 
 import "./styles.css";
 
@@ -14,15 +15,19 @@ const TextEdition = (props) => {
     const handleSubmit = () => {
         if (props.title === "Adicionar conteúdo" || props.title === "Editar conteúdo") {
             props.setContent(text);
+            props.setView(false);
         } else if (props.title === "Adicionar anotação" || props.title === "Editar anotação") {
             props.setAnnotation(text);
+            props.setView(false);
         } else { return }
     }
+
+    console.log(props.title)
 
     const modules = {
         toolbar: {
             container: [
-                [{ 'header': [1, 2, false] }, 'bold', 'italic', 'underline', 'strike', 'blockquote', { 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }, 'link', 'clean', { 'align': [] },],
+                ['bold', 'italic', 'underline', 'strike', 'blockquote', { 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }, 'link', 'clean', { 'align': [] },],
             ]
         },
     }
@@ -33,6 +38,8 @@ const TextEdition = (props) => {
         'list', 'bullet', 'indent',
         'link', 'align'
     ]
+
+
 
     return (
         <div className="text-edition">

@@ -32,3 +32,8 @@
     margin-right: 25px;
     margin-bottom: 25px;
 }
+
+.class-container-workspace-textfield {
+    width: 100%;
+    height: fit-content;
+}

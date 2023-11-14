@@ -3,6 +3,7 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
+    color: #333;
 }
 
 .input input {
@@ -12,7 +13,6 @@
     border-radius: 4px;
     outline: none;
     border: 1px solid #CCC;
-    color: #333;
 }
 
 .input input:focus {

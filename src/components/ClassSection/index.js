@@ -3,8 +3,6 @@ import "./styles.css";
 
 import Arrow from "../../assets/icon/arrow-blue.svg";
 
-import TableAttendance from "../TableAttendance";
-
 const ClassSection = (props) => {
 
     const [toggleSection, setToggleSection] = useState(false);

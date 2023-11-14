@@ -7,6 +7,7 @@
     margin-top: 60px;
     border-right: 1px solid #CCC;
     background-color: #FAFBFC;
+    color: #333;
 }
 
 .class-menu-title {
@@ -18,7 +19,6 @@
     font-weight: bold;
     border-bottom: 1px solid #CCC;
     background-color: #FFF;
-    color: #333;
 }
 
 .class-menu-container-day {

@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 25px 25px;
+    color: #333;
 }
 .semester-container-title {
     width: fit-content;
