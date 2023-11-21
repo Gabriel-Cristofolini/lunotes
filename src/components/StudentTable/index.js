@@ -1,70 +1,45 @@
 import "./styles.css";
 
+import Delete from "../../assets/icon/delete.svg";
+
 const StudentTable = () => {
 
     return (
-        <table className="studant-table">
+        <table className="student-table">
             <thead>
                 <tr>
-                    <th>Alunos</th>
-                    <th>Notas</th>
-                    <th>Fragmentos</th>
+                    <th>
+                        <input type="text" placeholder="Insira a matrícula" />
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
-                        <span>
-                            Nome do aluno / matrícula
-                        </span>
+                        <div>
+                            <input type="checkbox" className="student-table-checkbox" />
+                            <span>Nome do aluno / matrícula</span>
+                        </div>
+                        <img src={Delete} alt="Ícone de remover" className="student-table-delete" />
                     </td>
-                    <td><input type="text" min="0" max="10" placeholder="00.00"></input></td>
-                    <td>10.0</td>
                 </tr>
                 <tr>
                     <td>
-                        <span>
-                            Nome do aluno / matrícula
-                        </span>
+                        <div>
+                            <input type="checkbox" className="student-table-checkbox" />
+                            <span>Nome do aluno / matrícula</span>
+                        </div>
+                        <img src={Delete} alt="Ícone de remover" className="student-table-delete" />
                     </td>
-                    <td><input type="text" min="0" max="10" placeholder="00.00"></input></td>
-                    <td>10.0</td>
                 </tr>
                 <tr>
                     <td>
-                        <span>
-                            Nome do aluno / matrícula
-                        </span>
+                        <div>
+                            <input type="checkbox" className="student-table-checkbox" />
+                            <span>Nome do aluno / matrícula</span>
+                        </div>
+                        <img src={Delete} alt="Ícone de remover" className="student-table-delete" />
                     </td>
-                    <td><input type="text" min="0" max="10" placeholder="00.00"></input></td>
-                    <td>10.0</td>
-                </tr>
-                <tr>
-                    <td>
-                        <span>
-                            Nome do aluno / matrícula
-                        </span>
-                    </td>
-                    <td><input type="text" min="0" max="10" placeholder="00.00"></input></td>
-                    <td>10.0</td>
-                </tr>
-                <tr>
-                    <td>
-                        <span>
-                            Nome do aluno / matrícula
-                        </span>
-                    </td>
-                    <td><input type="text" min="0" max="10" placeholder="00.00"></input></td>
-                    <td>10.0</td>
-                </tr>
-                <tr>
-                    <td>
-                        <span>
-                            Nome do aluno / matrícula
-                        </span>
-                    </td>
-                    <td><input type="number" placeholder="00.00"></input></td>
-                    <td>10.0</td>
                 </tr>
             </tbody>
         </table>

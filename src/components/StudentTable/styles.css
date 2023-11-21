@@ -1,4 +1,4 @@
-.studant-table {
+.student-table {
     width: 100%;
     height: fit-content;
     border-radius: 4px;
@@ -8,71 +8,73 @@
     border-collapse: collapse;
 }
 
-.studant-table thead {
+.student-table thead {
     border-bottom: 1px solid #CCC;
     height: fit-content;
     width: fit-content;
 }
 
-.studant-table tr {
+.student-table tr {
     height: fit-content;
     display: flex;
 }
 
-.studant-table tr>*:not(:last-child) {
+.student-table tr>*:not(:last-child) {
     border-right: 1px solid #CCC;
 }
 
-.studant-table tr:not(:last-child) {
+.student-table tr:not(:last-child) {
     border-bottom: 1px solid #CCC;
 }
 
-.studant-table th {
+.student-table th {
     min-height: 30px;
 }
 
-
-.studant-table th:not(:first-child),
-.studant-table td:not(:first-child) {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.student-table th input {
+    width: 100%;
+    border: none;
+    outline: none;
 }
 
-.studant-table th:first-child,
-.studant-table td:first-child {
-    width: 60%;
+.student-table th,
+.student-table td {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 10px;
 }
 
-.studant-table td {
-    height: 30px;
+.student-table div {
+    width: fit-content;
+    display: flex;
 }
 
-.studant-table td span {
+.student-table td {
+    height: 30px;
+    width: 100%;
+    display: flex;
+
+}
+
+.student-table td:hover .student-table-delete {
+    display: block;
+}
+
+.student-table td span {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.student-table-checkbox {
+    margin-right: 10px;
+    cursor: pointer;
 }
 
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-.studant-table td input {
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: center;
+.student-table-delete {
+    display: none;
+    cursor: pointer;
 }

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 import Header from "../../components/Header";
-import StudentTable from "../../components/StudentTable";
+import GradeTable from "../../components/GradeTable";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
@@ -54,7 +54,7 @@ const Test = () => {
                 </section>
                 <section className="test-content-section">
                     <p className="test-content-section-subtitle">Notas</p>
-                    <StudentTable />
+                    <GradeTable />
                 </section>
                 <div className="test-content-submit">
                     <Button

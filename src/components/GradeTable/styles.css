@@ -1,0 +1,78 @@
+.grade-table {
+    width: 100%;
+    height: fit-content;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    color: #333;
+    border-collapse: collapse;
+}
+
+.grade-table thead {
+    border-bottom: 1px solid #CCC;
+    height: fit-content;
+    width: fit-content;
+}
+
+.grade-table tr {
+    height: fit-content;
+    display: flex;
+}
+
+.grade-table tr>*:not(:last-child) {
+    border-right: 1px solid #CCC;
+}
+
+.grade-table tr:not(:last-child) {
+    border-bottom: 1px solid #CCC;
+}
+
+.grade-table th {
+    min-height: 30px;
+}
+
+
+.grade-table th:not(:first-child),
+.grade-table td:not(:first-child) {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grade-table th:first-child,
+.grade-table td:first-child {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.grade-table td {
+    height: 30px;
+}
+
+.grade-table td span {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.grade-table td input {
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+}

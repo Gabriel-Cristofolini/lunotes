@@ -1,0 +1,86 @@
+.select-subject {
+    position: relative;
+    width: 250px;
+    height: 30px;
+    user-select: none;
+    border-radius: 4px;
+    color: #333;
+}
+
+.select-subject-header {
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    width: inherit;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    cursor: pointer;
+}
+.select-subject-option {
+    position: absolute;
+    z-index: 99;
+    top: 30px;
+    width: inherit;
+    transition: all ease 0.2s;
+}
+.select-subject-option div {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    background-color: #FFF;
+    cursor: pointer;
+}
+.select-subject-option div:hover {
+    background-color: #EEE;
+}
+.select-subject-option div:last-child {
+    border-radius: 0 0 4px 4px;
+}
+.select-subject-option-initial-state {
+    display: none;
+}
+.select-subject-option-opened {
+    animation: toggleOpened 0.2s linear forwards;
+}
+.select-subject-option-closed {
+    animation: toggleClosed 0.2s linear forwards;
+}
+
+@keyframes toggleOpened {
+    0% {
+        top: 0;
+        display: block;
+    }
+
+    100% {
+        top: 30px;
+        height: fit-content;
+    }
+
+    
+}
+
+@keyframes toggleClosed {
+    0% {
+        top: 30px;
+        height: fit-content;
+    }
+
+    99.9% {
+        top: 0;
+        height: 0px;
+    }
+
+    100% {
+        display: none;
+    }
+}
