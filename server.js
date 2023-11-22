@@ -21,7 +21,12 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to the application." });
 });
 
-require("./app/routes/aluno")(app);
+require("./app/routes/alunos")(app);
+require("./app/routes/materias")(app);
+require("./app/routes/turmas")(app);
+require("./app/routes/aulas")(app);
+require("./app/routes/avaliacoes")(app);
+require("./app/routes/usuarios")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
@@ -29,7 +34,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
-const db = require("./app/models");
+const db = require("./models");
 db.sequelize.sync()
   .then(() => {
     console.log("Synced db.");

@@ -1,5 +1,5 @@
-const db = require("../models");
-const Aluno = db.Aluno;
+const db = require("../../models");
+const Alunos = db.Alunos;
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
@@ -15,7 +15,7 @@ exports.create = (req, res) => {
     matricula: req.body.matricula
   };
 
-  Aluno.create(aluno)
+  Alunos.create(aluno)
     .then(data => {
       res.send(data);
     })
@@ -28,10 +28,10 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
-  const title = req.query.title;
-  var condition = title ? { title: { [Op.iLike]: `%${title}%` } } : null;
+  const turmaId = req.query.turmaId;
+  var condition = turmaId ? { turmaId: turmaId } : null;
 
-  Aluno.findAll({ where: condition })
+  Alunos.findAll({ where: condition })
     .then(data => {
       res.send(data);
     })
@@ -44,7 +44,12 @@ exports.findAll = (req, res) => {
 };
 
 exports.findOne = (req, res) => {
+  id = req.params.id;
 
+  Alunos.findByPk(id)
+    .then(data => {
+      res.send(data);
+    })
 };
 
 exports.update = (req, res) => {

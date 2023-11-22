@@ -16,14 +16,22 @@ module.exports = {
       avaliacaoId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: 'Avaliacoes',
-        referencesKey: 'id'
+        references: {
+          model: {
+            tableName: 'Avaliacoes',
+          },
+          key: 'id'
+        },
       },
       alunoId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: 'Alunos',
-        referencesKey: 'id'
+        references: {
+          model: {
+            tableName: 'Alunos',
+          },
+          key: 'id'
+        },
       },
       createdAt: {
         allowNull: false,

@@ -13,11 +13,23 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
+      conteudo: {
+        allowNull: true,
+        type: Sequelize.STRING
+      },
+      anotacao: {
+        allowNull: true,
+        type: Sequelize.STRING
+      },
       turmaId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: 'Turmas',
-        referencesKey: 'id'
+        references: {
+          model: {
+            tableName: 'Turmas',
+          },
+          key: 'id'
+        },
       },
       createdAt: {
         allowNull: false,

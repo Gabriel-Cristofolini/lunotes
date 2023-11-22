@@ -78,16 +78,164 @@ You can use `docker` or `podman` here, feel free to choose the one you prefer, t
 `podman run --rm --name=my-mysql --env MYSQL_ROOT_PASSWORD=password --detach --publish 3306:3306 mysql`
 
 #### Access the database
-`podman exec -it <podman-id> mysql -u root -p`
+`podman exec -it 03ead173b86c mysql -u root -p`
 
 ### Create database
-`CREATE DABATASE database_development;`
+`CREATE DATABASE database_development;`
 
 #### Generate migration models
-criar migracao: `sequelize model:generate --name User --attributes name:string,password:string,role:string`
+criar migracao: `sequelize model:generate --name Usuario --attributes email:string,senha:string`
 
 #### Run the generated migration
 rodar migracao: `sequelize db:migrate`
 
 #### Start the server
 `npm run server`
+
+
+## Endpoints
+
+### Criar Usuario
+
+POST: `api/usuarios`
+
+Body:
+```
+{
+  "email": "teste@teste.com",
+  "senha": "banana"
+}
+```
+
+### Validar Usuario
+
+GET: `api/usuarios?email=teste@teste.com&senha=banana`
+
+Result: 201 (OK) ou 401 (Unauthorized)
+
+---
+
+### Criar Materia
+
+POST: `api/materias`
+
+Body:
+```
+{
+  "nome": "Etica",
+  "descricao": "Uma descricao"
+}
+```
+
+### Buscar Todas as Materias
+
+GET: `api/materias`
+
+### Buscar Materia
+
+GET: `api/materias/:id`
+
+---
+
+### Criar Turma
+
+POST: `api/turmas`
+
+Body:
+```
+{
+  "nome": "Etica",
+  "descricao": "Uma descricao",
+  "semestre": 2,
+  "ano": 2023,
+  "materiaId": 1,
+  "alunos": [
+    { "nome": "Murilo", "matricula": "123321" },
+    { "nome": "Gabs", "matricula": "333222" }
+  ]
+}
+```
+
+### Buscar Todas as Turmas de uma Materia
+
+GET: `api/turmas?materiaId=1`
+
+### Buscar Turma
+
+GET: `api/turmas/:id`
+
+---
+
+### Criar Aula
+
+POST: `api/aulas`
+
+Body:
+```
+{
+  "nome": "Etica",
+  "descricao": "Uma descricao",
+  "semestre": 2,
+  "ano": 2023,
+  "materiaId": 1,
+  "alunos": [
+    { "nome": "Murilo", "matricula": "123321" },
+    { "nome": "Gabs", "matricula": "333222" }
+  ]
+}
+```
+
+### Buscar Todas as Aulas de uma Turma
+
+GET: `api/aulas?turmaId=1`
+
+### Buscar Turma
+
+GET: `api/aulas/:id`
+
+### Criar Anotacao de uma Aula
+
+POST: `api/aulas/:id/anotacao`
+
+### Criar Conteudo de uma Aula
+
+POST: `api/aulas/:id/conteudo`
+
+---
+
+### Buscar Todos os Alunos de uma Turma
+
+GET: `api/alunos?turmaId=1`
+
+### Buscar Aluno
+
+GET: `api/alunos/:id`
+
+---
+
+### Criar Avaliacao
+
+
+POST: `api/avaliacoes`
+
+Body:
+```
+{
+  "nome": "Etica",
+  "descricao": "Uma descricao",
+  "peso": 0.2,
+  "aulaId": 1,
+  "avaliacaoAlunos": [
+    { "alunoId": 1, "nota": 9.5 },
+    { "alunoId": 2, "nota": 8.0 }
+  ]
+}
+```
+
+### Buscar Todas as Avaliacoes de uma Aula
+
+GET: `api/avaliacoes?aulaId=1`
+
+### Buscar Avaliacao
+
+GET: `api/avaliacoes/:id`

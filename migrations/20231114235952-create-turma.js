@@ -28,8 +28,12 @@ module.exports = {
       materiaId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: 'Materias',
-        referencesKey: 'id'
+        references: {
+          model: {
+            tableName: 'Materias',
+          },
+          key: 'id'
+        },
       },
       createdAt: {
         allowNull: false,

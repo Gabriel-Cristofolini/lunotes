@@ -1,5 +1,5 @@
 module.exports = app => {
-  const alunos = require("../controllers/aluno.js");
+  const alunos = require("../controllers/alunos.js");
 
   var router = require("express").Router();
 
@@ -10,10 +10,6 @@ module.exports = app => {
   router.get("/:id", alunos.findOne);
 
   router.put("/:id", alunos.update);
-
-  router.delete("/:id", alunos.delete);
-
-  router.delete("/", alunos.deleteAll);
 
   app.use('/api/alunos', router);
 };
